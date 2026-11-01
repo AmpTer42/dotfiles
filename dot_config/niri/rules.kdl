@@ -1,0 +1,58 @@
+// Open terminal, Steam and Bitwarden on first workspace
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    match app-id="steam"
+    match app-id="Bitwarden"
+
+    open-on-workspace "1"
+}
+
+// Open messengers on second workspace
+window-rule {
+    match app-id="obsidian"
+    match app-id="max"
+    match app-id="org.telegram.desktop"
+    match app-id="discord"
+
+    open-on-workspace "2"
+}
+
+// Open browsers on third workspace and maximize them
+window-rule {
+    match app-id=r#"firefox$"#
+    match app-id="io.github.ungoogled_software.ungoogled_chromium"
+    match app-id="org.qutebrowser.qutebrowser"
+
+    open-on-workspace "3"
+    open-maximized true
+}
+
+// Default settings
+window-rule {
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+
+    default-column-width {}
+}
+
+// Fix Firefox PiP
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
+    open-floating true
+}
+
+// Block password managers from screencast and screen capture
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id="Bitwarden"
+
+    block-out-from "screen-capture"
+}
+
+// Some other fixes
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+}

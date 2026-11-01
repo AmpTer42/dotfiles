@@ -1,0 +1,118 @@
+theme = "base16_transparent"
+[editor]
+scrolloff = 5
+mouse = false
+default-yank-register = "\"" 
+middle-click-paste = true
+scroll-lines = 0
+shell = ["nu", "-c"]
+line-number = "relative"
+cursorline = false
+cursorcolumn = false
+continue-comments = true
+auto-completion = true
+path-completion = true
+auto-format = true
+idle-timeout = 250 # in milliseconds
+completion-timeout = 5 # in milliseconds
+preview-completion-insert = true
+completion-trigger-len = 2 # in mins
+completion-replace = false # makes completion always replace word
+auto-info = true
+true-color = false
+undercurl = false
+rulers = []
+bufferline = "never"
+color-modes = false
+text-width = 80
+workspace-lsp-roots = []
+default-line-ending = "native"
+insert-final-newline = true
+popup-border = "none"
+indent-heuristic = "hybrid"
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+end-of-line-diagnostics = "hint"
+clipboard-provider = "wayland"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "position-percentage"]
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = false
+auto-signature-help = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 3000
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.indent-guides]
+render = false
+character = "|"
+skip-levels = 0
+
+[editor.gutters]
+layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.gutters.line-numbers]
+min-width = 3
+
+[editor.soft-wrap]
+enable = false
+max-wrap = 20
+max-indent-retain = 40
+wrap-indicator = ""
+
+[editor.smart-tab]
+enable = true
+supersede-menu = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "disable"
+prefix-len = 1
+max-wrap = 20
+max-diagnostics = 10

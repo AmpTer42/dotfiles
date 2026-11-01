@@ -1,0 +1,115 @@
+// This config is in the KDL format: https://kdl.dev
+// Check the wiki for a full description of the configuration:
+// https://yalter.github.io/niri/Configuration:-Introduction
+
+include "devices.kdl"
+include "binds.kdl"
+include "rules.kdl"
+
+// Settings that influence how windows are positioned and sized.
+// https://yalter.github.io/niri/Configuration:-Layout
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 0
+
+    // When to center a column when changing focus, options are:
+    // - "never", default behavior, focusing an off-screen column will keep at the left
+    //   or right edge of the screen.
+    // - "always", the focused column will always be centered.
+    // - "on-overflow", focusing a column will center it if it doesn't fit
+    //   together with the previously focused column.
+    center-focused-column "never"
+
+    // You can customize the widths that "switch-preset-column-width" (Mod+B) toggles between.
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    // You can change the default width of the new windows.
+    default-column-width { proportion 0.5; }
+
+    // Niri will draw focus ring and border *around* windows that agree to omit their
+    // client-side decorations.
+    //
+    // Alternatively, you can override it with a window rule called
+    // `draw-border-with-background`.
+
+    focus-ring {
+        on
+
+        width 1
+
+        active-color "#1e5a8a"
+        inactive-color "#0f2a44"
+    }
+    border {
+        // If you enable the border, you probably want to disable the focus ring.
+        off
+
+        width 1
+        active-color "#1e5a8a"
+        inactive-color "#0f2a44"
+        urgent-color "#03080f"
+
+        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    shadow {
+        off
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+    tab-indicator {
+	width 0
+	gap 0
+	length total-proportion=1.0
+	position "top"
+	place-within-column
+    }
+    insert-hint {
+	off
+    }
+}
+spawn-at-startup "mako"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "qs"
+
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+spawn-sh-at-startup "awww clear #000308"
+
+hotkey-overlay {
+    skip-at-startup
+}
+// After enabling or disabling this, you need to restart the apps for this to take effect.
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot %Y-%m-%d %H-%M-%S.png"
+
+
+animations {
+    off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    slowdown 0
+}
+
+// Add named workspaces
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"

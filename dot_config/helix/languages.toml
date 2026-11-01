@@ -1,0 +1,69 @@
+[[language]]
+name = "rust"
+auto-format = true
+language-servers = ["rust-analyzer"]
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["pylsp"]
+
+[[language]]
+name = "bash"
+auto-format = true
+language-servers = ["bash-language-server"]
+
+[[language]]
+name = "cpp"
+auto-format = true
+language-servers = ["clangd"]
+
+[[language]]
+name = "c"
+auto-format = true
+language-servers = ["clangd"]
+
+[[language]]
+name = "go"
+auto-format = true
+language-servers = ["gopls"]
+
+[[language]]
+name = "markdown"
+auto-format = true
+language-servers = ["marksman"]
+
+[[language]]
+name = "zig"
+auto-format = true
+language-servers = ["zls"]
+
+[[language]]
+name = "yaml"
+auto-format = true
+language-servers = ["yaml-language-server"]
+
+[[language]]
+name = "meson"
+auto-format = true
+language-servers = ["mesonlsp"]
+
+[language-server.nu-lint]
+command = "nu-lint"
+args = ["lsp"]
+
+
+[[language]]
+name = "nu"
+auto-format = false
+language-servers = ["nu-lsp", "nu-lint"]
+
+[[language]]
+name = "tfvars"
+auto-format = true
+language-servers = ["terraform-ls"]
+
+[[language]]
+name = "hcl"
+auto-format = true
+language-servers = ["terraform-ls"]
