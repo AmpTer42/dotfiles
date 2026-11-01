@@ -1,0 +1,22 @@
+color=000308
+scaling=solid_color
+show-keyboard-layout
+indicator-idle-visible
+font=Terminess Nerd Font Mono
+color=000308
+inside-color=000308
+inside-clear-color=000308
+inside-ver-color=000308
+inside-wrong-color=000308
+ring-color=1e5a8a
+ring-clear-color=3d7eb8
+ring-ver-color=1e5a8a
+ring-wrong-color=ff2e3f
+key-hl-color=ffc625
+bs-hl-color=ff2e3f
+line-color=000308
+separator-color=000308
+text-color=c8d4e0
+text-clear-color=c8d4e0
+text-ver-color=c8d4e0
+text-wrong-color=ff2e3f
