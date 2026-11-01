@@ -1,0 +1,13 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+html, body, p, div, span, a, li, td, th, h1, h2, h3, h4, h5, h6,
+input, textarea, select, button, label, article, section, header,
+footer, nav, aside, blockquote, pre, code, kbd, samp, tt {
+    font-family: "Terminess Nerd Font Mono" !important;
+}
+
+/* Иконки не трогаем — иначе Font Awesome / Material Icons превратятся в квадраты */
+[class*="icon"], [class*="fa-"], [class*="material-icons"],
+.fa, .fas, .far, .fab, .material-icons, .material-symbols-outlined {
+    font-family: inherit !important;
+}

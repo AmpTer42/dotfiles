@@ -1,0 +1,46 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = 'defcon'
+format = """
+[](fg:line)$directory[](fg:fg bg:panel)$git_branch$git_status\
+[](fg:panel bg:bg0)$character"""
+
+[palettes.defcon]
+bg0     = "#000308"
+panel   = "#03080f"
+dim     = "#2a4a6b"
+line    = "#1e5a8a"
+fg      = "#c8d4e0"
+red     = "#ff2e3f"
+yellow  = "#ffc625"
+green   = "#3dff8f"
+cyan    = "#22d3ee"
+
+[character]
+success_symbol = "[▌](fg:cyan)"
+error_symbol   = "[▌](fg:red)"
+vimcmd_symbol  = "[▌](fg:yellow)"
+
+[directory]
+style = "fg:fg bg:panel"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "fg:dim bg:panel"
+format = "[ $symbol$branch ]($style)"
+symbol = "⌥ "
+
+[git_status]
+style = "fg:red bg:panel"
+format = "[$all_status]($style)"
+conflicted = "✖"
+ahead = "▲"
+behind = "▼"
+diverged = "◆"
+untracked = "?"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✖"
