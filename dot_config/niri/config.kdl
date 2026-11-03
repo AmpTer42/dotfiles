@@ -85,7 +85,7 @@ spawn-at-startup "awww-daemon"
 spawn-at-startup "qs"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-spawn-sh-at-startup "awww clear #000308"
+spawn-sh-at-startup "sh -c 'until awww query >/dev/null 2>&1; do sleep 0.1; done; awww clear 000308'"
 
 hotkey-overlay {
     skip-at-startup
