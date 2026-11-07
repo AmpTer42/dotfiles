@@ -7,6 +7,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    // Suggested binds for music
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -17,11 +18,14 @@ binds {
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    Mod+B                allow-when-locked=true { spawn-sh "playerctl next"; }
+    Mod+Z                allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Mod+O                allow-when-locked=true { spawn-sh "playerctl play-pause"; }
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+O repeat=false { toggle-overview; }
+    Mod+Shift+O repeat=false { toggle-overview; }
 
     Mod+C repeat=false { close-window; }
 
@@ -108,9 +112,9 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
-    Mod+B { switch-preset-column-width; }
-    Mod+Shift+B { switch-preset-window-height; }
-    Mod+Ctrl+B { reset-window-height; }
+    Mod+T { switch-preset-column-width; }
+    Mod+Shift+T { switch-preset-window-height; }
+    Mod+Ctrl+T { reset-window-height; }
     Mod+W { maximize-column; }
     Mod+Shift+W { fullscreen-window; }
 
